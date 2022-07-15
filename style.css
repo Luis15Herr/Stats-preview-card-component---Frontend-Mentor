@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  color: white;
+  font-size: 15px;
+}
+
+html::after,
+body::after {
+  /*    content: "";
+    background-image: url(./design/desktop-design.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.3; */
+}
+
+.container {
+  background-color: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  background-color: #1b1938;
+  width: 1110px;
+  height: 445px;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 540px;
+      grid-template-columns: 1fr 540px;
+  overflow: hidden;
+}
+
+.card__img {
+  background-image: url(./images/image-header-desktop.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card__img::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #5b098294;
+}
+
+.card__info {
+  padding: 70px 72px 0px 72px;
+}
+
+.card__title {
+  font-family: "Inter", sans-serif;
+  font-size: 2.45em;
+  margin-bottom: 26px;
+  letter-spacing: -0.2px;
+}
+
+.text--accent {
+  color: #aa5cdb;
+}
+
+.card__subtitle {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.98em;
+  word-spacing: 1px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 73px;
+  width: 350px;
+}
+
+.stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stats__number {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.stats__title {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.88em;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

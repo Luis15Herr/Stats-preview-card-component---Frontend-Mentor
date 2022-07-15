@@ -1,0 +1,119 @@
+$Verydarkblue: hsl(233, 47%, 7%); //(main background)
+$Darkdesaturatedblue: hsl(244, 38%, 16%); //(card background)
+$Softviolet: hsl(277, 64%, 61%); //(accent)
+$White: hsl(0, 0%, 100%); //(main heading, stats)
+$Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75); //(main paragraph)
+$Slightlytransparentwhite2: hsla(0, 0%, 100%, 0.6); //(stat headings)
+
+$PrimaryFont: "Inter", sans-serif;
+$SecondaryFont: "Lexend Deca", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  color: $White;
+  font-size: 15px;
+  &::after {
+    /*    content: "";
+    background-image: url(./design/desktop-design.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.3; */
+  }
+}
+.container {
+  background-color: $Verydarkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: $Darkdesaturatedblue;
+  width: 1110px;
+  height: 445px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 540px;
+  overflow: hidden;
+}
+
+.card__img {
+  background-image: url(./images/image-header-desktop.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #5b098294;
+  }
+}
+.card__info {
+  padding: 70px 72px 0px 72px;
+}
+.card__title {
+  font-family: $PrimaryFont;
+  font-size: 2.45em;
+  margin-bottom: 26px;
+  letter-spacing: -0.2px;
+}
+.text--accent {
+  color: $Softviolet;
+}
+.card__subtitle {
+  font-family: $SecondaryFont;
+  font-size: 0.98em;
+  word-spacing: 1px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: $Slightlytransparentwhite;
+}
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 73px;
+  width: 350px;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats__number {
+  font-family: $PrimaryFont;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+.stats__title {
+  font-family: $SecondaryFont;
+  text-transform: uppercase;
+  font-size: 0.88em;
+  margin-top: 6px;
+  color: $Slightlytransparentwhite2;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
