@@ -5,25 +5,15 @@
           box-sizing: border-box;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   position: relative;
   color: white;
   font-size: 15px;
-}
-
-html::after,
-body::after {
-  /*    content: "";
-    background-image: url(./design/desktop-design.jpg);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    opacity: 0.3; */
 }
 
 .container {
@@ -46,8 +36,8 @@ body::after {
   border-radius: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 540px;
-      grid-template-columns: 1fr 540px;
+  -ms-grid-columns: 1fr 48.65%;
+      grid-template-columns: 1fr 48.65%;
   overflow: hidden;
 }
 
@@ -137,7 +127,90 @@ body::after {
   text-transform: uppercase;
 }
 
+.attribution {
+  font-family: "Inter", sans-serif;
+}
+
 .attribution a {
-  color: #3e52a3;
+  color: #aa5cdb;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 70%;
+  }
+  .card__info {
+    padding: 50px 25px;
+  }
+  .card__img {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: initial;
+  }
+  .container {
+    padding: 0 25px;
+  }
+  .card {
+    width: 445px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 40px 0;
+  }
+  .card__info {
+    padding: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 0 35px;
+    margin-top: 38px;
+  }
+  .card__title {
+    text-align: center;
+    font-size: 1.86em;
+    margin-bottom: 15px;
+  }
+  .card__subtitle {
+    text-align: center;
+  }
+  .card__subtitle br {
+    display: none;
+  }
+  .card__stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+  .stats {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .card__img {
+    height: 240px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    background-position: initial;
+    background-image: url(./images/image-header-mobile.jpg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

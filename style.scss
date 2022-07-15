@@ -12,24 +12,14 @@ $SecondaryFont: "Lexend Deca", sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
-
-html,
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   position: relative;
   color: $White;
   font-size: 15px;
-  &::after {
-    /*    content: "";
-    background-image: url(./design/desktop-design.jpg);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    opacity: 0.3; */
-  }
 }
 .container {
   background-color: $Verydarkblue;
@@ -43,7 +33,8 @@ body {
   height: 445px;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: 1fr 540px;
+  grid-template-columns: 1fr 48.65%;
+
   overflow: hidden;
 }
 
@@ -114,6 +105,75 @@ body {
 .text--uppercase {
   text-transform: uppercase;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.attribution {
+  font-family: $PrimaryFont;
+  a {
+    color: $Softviolet;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 70%;
+  }
+  .card__info {
+    padding: 50px 25px;
+  }
+
+  .card__img {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: initial;
+  }
+  .container {
+    padding: 0 25px;
+  }
+  .card {
+    width: 445px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+  }
+  .card__info {
+    padding: 0;
+    order: 1;
+    padding: 0 35px;
+    margin-top: 38px;
+  }
+  .card__title {
+    text-align: center;
+    font-size: 1.86em;
+    margin-bottom: 15px;
+  }
+  .card__subtitle {
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+
+  .card__stats {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+  .stats {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .card__img {
+    height: 240px;
+    order: 0;
+    background-position: initial;
+    background-image: url(./images/image-header-mobile.jpg);
+  }
 }
